@@ -1,0 +1,49 @@
+#include<iostream>
+
+using namespace std;
+
+int main(){
+    
+    int n;
+    cin>>n;
+    int arr[n];
+    for(int i = 0; i < n; i++){
+        cin>>arr[i];
+    }
+    int max = arr[0];
+    int min = arr[0];
+    for(int j = 1; j < n; j++){
+        if(arr[j]>max){
+            max = arr[j];
+        }
+    }   
+    for(int j = 1; j < n; j++){
+        if(arr[j]<min){
+            min = arr[j];
+        }
+    }  
+    int max_pos, min_pos;
+    for(int j = 0; j < n; j++){
+        if(arr[j]==max){
+            max_pos = j;
+            break;
+        }
+    }
+      for(int j = n-1; j >=0; j--){
+        if(arr[j]==min){
+            min_pos = j;
+            break;
+        }
+    }
+    if(max_pos<min_pos){
+        int time1= max_pos+(n-min_pos-1);
+        cout<<time1<<endl;
+    }else if(max_pos>min_pos){
+        int time2 = max_pos+(n-min_pos-2);
+        cout<<time2<<endl;
+    }else{
+        cout<<0<<endl;
+    }
+    
+    return 0;
+}
