@@ -1,0 +1,27 @@
+#include <iostream>
+ 
+using namespace std;
+ 
+int main()
+{
+    int a, b, c;
+    int cases[5];
+    cin>>a;
+    cin>>b;
+    cin>>c;
+    cases[0] = a+b*c;
+    cases[1] = a*(b+c);
+    cases[2] = a*b*c;
+    cases[3] = (a+b)*c;
+    cases[4] = a+b+c;
+    
+    int max = cases[0];
+    for(int i = 1; i < 5; i++){
+        if(cases[i]>max){
+            max = cases[i];
+        }
+    }
+    cout<<max<<endl;
+ 
+    return 0;
+}
