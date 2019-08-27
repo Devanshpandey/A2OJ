@@ -1,0 +1,26 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+   long long int k;
+   long long int n;
+   long long int even, odd;
+   cin>>n>>k;
+   if(n%2==0){
+       even = n/2;
+       odd = n/2;
+   }
+   else{
+       even = n/2;
+       odd = (n/2)+1;
+   }
+   if(k<=odd){
+       cout<<k*2-1;
+   }else{
+       cout<<(k-odd)*2;
+   }
+   return 0;
+}
+
