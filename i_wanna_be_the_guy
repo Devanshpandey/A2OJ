@@ -1,0 +1,46 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int n;
+    int flag = 0;
+    cin>>n;
+    int p, q;
+    int a[201] = {0};
+    cin>>p;
+    for(int i = 0; i < p; i++){
+        cin>>a[i];
+    }
+    cin>>q;
+    for(int i = p; i < q+p; i++){
+        cin>>a[i];
+    }
+   
+    if(p+q<n){
+        cout<<"Oh, my keyboard!"<<endl;
+        return 0;
+    }
+    else{
+        for(int k = 1; k < n+1; k++){
+            for(int j = 0; j < p+q; j++){
+                if(a[j]==k){
+                    break;
+                }if(j==p+q-1){
+                    flag = 1;
+                }
+            }if(flag == 1){
+                break;
+            }
+        }
+    }
+    if(flag == 1){
+        cout<<"Oh, my keyboard!"<<endl;
+    }
+    else{
+        cout<<"I become the guy."<<endl;
+    }
+    return 0;
+}
+
