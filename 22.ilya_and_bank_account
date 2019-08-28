@@ -1,0 +1,33 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int n;
+    cin>>n;
+    if(n>=0){
+        cout<<n<<endl;
+    }
+    else{
+        int a = (n/100)*10+n%10;
+        int b = (n/100)*10+(n%100)/10;
+        if(a>b){
+            if(a==(-0)){
+                cout<<0<<endl;
+            }else{
+                cout<<a<<endl;
+            }
+        }
+        else{
+            if(b==(-0)){
+                cout<<0<<endl;
+            }else{
+                cout<<b<<endl;
+            }
+        }
+    }
+
+    return 0;
+}
+
