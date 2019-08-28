@@ -1,0 +1,26 @@
+#include <iostream>
+    #include <cmath>
+     
+    using namespace std;
+     
+    int main()
+    {
+        int n, m, a, b;
+        int sum;
+        cin>>n>>m>>a>>b;
+        
+        if(a<=b/m){
+            int t = n*a;
+            cout<<t<<endl;
+        }
+        else{
+            if((n%m)*a<b){
+                cout << (n/m) * b + (n%m) * a << endl;
+            }
+            else{
+                cout << (n/m) * b + b << endl;
+            }
+        }
+     
+        return 0;
+    }
