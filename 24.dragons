@@ -1,0 +1,34 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int s, n;
+    int count = 0;
+    cin>>s>>n;
+    int x[n], y[n];
+    for(int i = 0; i < n; i++){
+        cin>>x[i]>>y[i];
+    }
+    int j = 0;
+    while(j<n){
+        if(s>x[j]){
+            s = s + y[j];
+            count++;
+            x[j] = 100000;
+            j = 0;
+            if(count == n){
+                cout<<"YES"<<endl;
+                return 0;
+            }
+        }
+        else{
+            j++;
+        }
+    }
+    cout<<"NO"<<endl;
+    
+    return 0;
+}
+
